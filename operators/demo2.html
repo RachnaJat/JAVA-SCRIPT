@@ -1,0 +1,41 @@
+<script>
+ /*
+    Relational Operator : >,<,>=,<=,!=,==,===
+   Turnary Operator : Compare Between Variable values
+   
+   (condition) ? true Statement : false Statement
+  */
+
+var x= 20;
+var y= '20';
+
+
+document.write("x > y "+(x>y)+"<br>");  // false
+document.write("x < y "+(x<y)+"<br>");  // false
+
+document.write("x >= y "+(x>=y)+"<br>");  //true
+document.write("x <= y "+(x<=y)+"<br>");   //true
+
+document.write("x != y "+(x!=y)+"<br>"); // false
+
+document.write("<hr>");
+var res= x==y;   //== Operator check variable data & return boolean value
+document.write("result "+res);
+
+
+
+//TERNARY OPERATOR
+(res)?document.write("<H1>EQUAL</H1>"):document.write("<H1> NOT EQUAL</H1>");
+
+
+res= x===y;   //Check DataType then check value & return boolean value
+document.write("result = "+res);
+
+
+//TERNARY OPERATOR
+(res)?document.write("<H1>EQUAL</H1>"):document.write("<H1> NOT EQUAL</H1>");
+
+
+
+
+</script>
