@@ -1,0 +1,19 @@
+<script>
+/*
+check given number is Armstrong or not 
+input: 153 :1*1*1+5*5*5+3*3*3
+*/
+
+var num= 153;
+rem1= num%10;  //3
+
+num1=parseInt(num/10); //15
+rem2= num1%10;  //5
+
+num2=parseInt(num1/10);
+rem3= num2%10;
+ var ar= rem1*rem1*rem1+rem2*rem2*rem2+rem3*rem3*rem3;
+
+ (ar==num)?document.write("<h1>Given no : "+num+" is Armstrong</h1>"):document.write("<h1>Given no :" +num+ "is not  Armstrong</h1>");
+
+</script>
