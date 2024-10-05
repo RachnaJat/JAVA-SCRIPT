@@ -1,0 +1,25 @@
+<script>
+/*
+  Print Given number(3 digit) into reverse Order Witout using any loop.
+  Input : num = 123
+  Output : 321
+*/
+var num = 123;
+
+rem1 = num% 10;  //3
+num1= parseInt(num/10);    //12
+
+rem2= num1%10; //2
+num2= parseInt(num1/10);  //1
+
+rem3= num2%10;  //1
+
+
+var rev= rem1*100+rem2*10+rem3;
+
+document.write("Given number :"+num+"<br>");
+
+document.write("Reverse order of above given number :"+rev+"<br>");
+
+
+</script>
