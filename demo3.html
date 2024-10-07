@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<head> 
+    <title>User Input</title>
+    <script>
+function getdata()
+{
+
+var data= document.getElementById("data");
+var result= data.value;
+document.write("Entered data is : "+result);
+}
+
+
+
+    </script>
+
+</head>
+<body>
+  <input type="text" placeholder="enter data"  id="data"/>
+<button onclick="getdata()" >Click here</button>
+
+</body>
+</html>
+
+
+<!--
+
+fetch id:  getElementById("data")  and this function return specific 
+           field/tag object
+-->
