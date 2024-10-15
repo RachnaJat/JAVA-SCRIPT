@@ -1,43 +1,45 @@
 <!DOCTYPE html>
-<head>
- 
-    <title>Document</title>
-    <script>
-function valid()
-{
-    var mob= document.getElementById('mobile').value;
 
-    if(mob.length==0)
-{
-    err1.innerHtml="plz enter mobile number";
-    err1.style.color="red";
-}
-else if (isNaN(mob))
-{
-    err1.innerHtml="mobile no should be 10 digits";
-    err1.style.color="red";
-}
-else
-{
-err1.innerHtml='';
-}
-}
-
-
-
-
-    </script>
-</head>
-<body>
-   <center>
-<h1>Mobile Validation</h1>
-<input type="text" id ="mobile" placeholder="enter mobile" onkeyup="valid()"/>
-<span id="err1">
-</span>
-<br>
-<br>
-<input type=" button" value="check mobile" onclick="valid()"/>
- 
-   </center> 
-</body>
+  <head>
+   <script>
+    function valid()
+	{
+	  var mob = document.getElementById('mobile').value;
+	  
+	  var err1 = document.getElementById('err1');
+	  
+	  if(mob.length == 0)
+	  {
+	    err1.innerHTML = "Plz Enter Mobile number";
+		err1.style.color = "red";
+	  }
+	  else if(isNaN(mob))
+	  { 
+	    err1.innerHTML = "Enter Only Numeric Value";
+		err1.style.color = "red";
+	  }
+	  else if(mob.length<10 || mob.length>10)
+	  {
+	      err1.innerHTML = "mobile no should be 10 digits";
+		err1.style.color = "red";
+	  }
+	  else
+	  {
+	    err1.innerHTML = '';
+	  }
+	}
+	
+	
+   </script>	
+  </head>
+  <body>  
+    <center>
+	  <h1>Mobile Validation</h1>
+	  <input type="text" id="mobile" placeholder="Enter Mobile"
+	  onkeyup="valid()"/>
+	  <span id="err1"></span>
+	  <br/><br/>
+	  <input type="button" value="Check Mobile" onclick="valid()"/>
+	</center>
+  </body>
 </html>
