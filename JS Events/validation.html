@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<head>
+
+    <title>Document</title>
+    <script>
+function valid()
+{
+    var uname = document.getElementById('username').value;
+    var pass = document.getElementById('password').value;
+
+    var err1 = document.getElementById('err1');
+     var err2 = document.getElementById('err2');
+    console.log(uname.length +" : "+pass.length);
+  if(uname.length==0)
+  {
+    //alert("plz enter username");
+    err1.innerHTML="plz enter username";
+    err1.style.color ="red";
+  }
+  else
+  {
+    err1.innerHTML ='';
+  }
+  if(pass.length==0)
+  {
+    //alert("plz enter password");
+    err2.innerHTML="plz enter password";
+    err2.style.color ="red";
+  }
+  else
+  {
+    err2.innerHTML ='';
+  }
+}
+    </script>
+</head>
+<body>
+  <center>
+<h1>Validation</h1>
+<input type="text" id ="username" placeholder="Enter User Name" onblur="valid()" />
+<span id ="err1"></span>
+<br>
+<br>
+<input type="text" id ="password" placeholder="Enter password" onblur="valid()" />
+<span id ="err2"></span>
+<br>
+<br>
+<input type="button" value="login" onclick="valid()"/>
+  </center>
+    
+</body>
+</html>
