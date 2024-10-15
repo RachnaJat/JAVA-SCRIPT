@@ -1,0 +1,72 @@
+<html>
+  <head>
+   <script>
+    function valid()
+	{
+	  var pass = document.getElementById('password').value;
+	  var cpass = document.getElementById('cpassword').value;
+	  
+	  var err1 = document.getElementById('err1');
+	  var err2 = document.getElementById('err2');
+	  
+	  console.log(pass.length+" : "+cpass.length);
+	  if(pass.length == 0)
+	  {
+	    //alert("Plz Enter Username");
+	    err1.innerHTML = "Plz Enter Password";
+		err1.style.color = "red";
+	  }
+	  else if(pass.length<5 || pass.length>8)
+	  {
+	      err1.innerHTML = "Password should be 5-8 chars";
+		err1.style.color = "red";
+	  }
+	  else
+	  {
+	    err1.innerHTML = '';
+	  }
+	  if(cpass.length == 0)
+	  {
+	    //alert("Plz Enter Password");
+	    err2.innerHTML = "Plz Re-Enter Password";
+		err2.style.color = "red";
+	  }
+	  else
+	  {
+	    err2.innerHTML = '';
+	  }
+	}
+	
+	function check_pass()
+	{
+       var pass = document.getElementById('password');
+	  var cpass = document.getElementById('cpassword');
+	  
+	  if(cpass.value != pass.value)
+	  {
+	    err2.innerHTML = "Password does not match";
+		err2.style.color = "red";
+	  }
+	  else
+	  {
+	    err2.innerHTML = '';
+	  }
+	}
+	
+   </script>	
+  </head>
+  <body>  
+    <center>
+	  <h1>Password Validation</h1>
+	  <input type="text" id="password" placeholder="Enter Password"
+	  onkeyup="valid()"/>
+	  <span id="err1"></span>
+	  <br/><br/>
+	  <input type="text" id="cpassword" placeholder="Re-Enter Password"
+	   onkeyup="check_pass()"/>
+	   <span id="err2"></span>
+	  <br/><br/>
+	  <input type="button" value="Check Password" onclick="valid()"/>
+	</center>
+  </body>
+</html>
